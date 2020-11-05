@@ -21,7 +21,7 @@ public class TicTacToe {
     public static void setUserChoice()
     {
         Scanner sc=new Scanner(System.in);
-        System.out.println(" User can choice x | 0 ");
+        System.out.println(" \nUser can choice x | 0 ");
         userChoice = sc.nextLine();
         if (userChoice.equals("x")){
             computerChoice="0";
@@ -31,7 +31,7 @@ public class TicTacToe {
         }
 
         else {
-            System.out.println("sorry!!! Only Entered (x | 0)");
+            System.out.println("\nsorry!!! Only Entered (x | 0)");
         }
 
     }
@@ -39,6 +39,7 @@ public class TicTacToe {
     //uc3_Displaying Bord
     public static void displayBoard(char[] board)
     {
+        System.out.println("\nDisplaying Game Board");
         for (int index = 1; index < board.length; index=index+3)
         {
             System.out.println();
