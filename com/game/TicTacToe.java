@@ -58,6 +58,4 @@ public class TicTacToe {
 
         displayBoard(gameBoard);
     }
-
-
 }
