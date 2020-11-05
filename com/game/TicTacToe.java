@@ -4,7 +4,10 @@ import java.util.Scanner;
 
 public class TicTacToe {
 
-        //CreateBoard Method for ten elements
+    public static String computerChoice="";    //Computer choice
+    public static String userChoice = ""; //user choice
+
+        //uc1_CreateBoard Method for ten elements
         public static char[] createBoard()
         {
             char[] board = new char[10];
@@ -15,30 +18,29 @@ public class TicTacToe {
             return board;
         }
 
-        public static String UserChoice()
+        //uc2_UserChoice
+        public static void setUserChoice()
         {
             Scanner sc=new Scanner(System.in);
             System.out.println(" User can choice x | 0 ");
-            return sc.nextLine();
+            userChoice = sc.nextLine();
+            if (userChoice.equals("x")){
+                computerChoice="0";
+            }
+            else{
+                computerChoice="x";
+            }
         }
 
         public static void main(String[] args)
         {
-            Scanner sc =new Scanner(System.in);
             System.out.println("Welcome to Tic tac Toe...");
+            //Creating game board
+            char[] gameBoard = createBoard();
 
-            String Computerchoice="";    //Computer choice
-            String Userchoice = UserChoice(); //user choice
-
-            if (Userchoice.equals("x")){
-                Computerchoice="0";
-            }
-
-            else{
-                Computerchoice="0";
-            }
-
-
+            //setting user choice
+            setUserChoice();
+            System.out.println("User Choice :"+userChoice+" Computer choice :"+computerChoice);
         }
 
 
